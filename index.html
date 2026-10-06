@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="topbar">
+        <div class="title">Weather Dashboard</div>
+
+        <form class="search-box" id="searchForm">
+          <input id="cityInput" type="text" placeholder="Search city..." value="Lahore" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <div id="weatherCard" class="weather-card">
+        <div>
+          <div class="location" id="locationText">Loading...</div>
+
+          <div class="temp-row">
+            <div class="degree" id="currentTemp">--°</div>
+            <div class="condition" id="currentCondition">Loading...</div>
+          </div>
+
+          <div class="meta">
+            <div class="meta-item">
+              <div class="meta-label">Feels like</div>
+              <div class="meta-value" id="feelsLike">--°</div>
+            </div>
+
+            <div class="meta-item">
+              <div class="meta-label">Humidity</div>
+              <div class="meta-value" id="humidity">--%</div>
+            </div>
+
+            <div class="meta-item">
+              <div class="meta-label">Wind</div>
+              <div class="meta-value" id="wind">-- km/h</div>
+            </div>
+
+            <div class="meta-item">
+              <div class="meta-label">Rain chance</div>
+              <div class="meta-value" id="rainChance">--%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-panel">
+          <div class="mini-card">
+            <h3>Sunrise</h3>
+            <div class="mini-value" id="sunrise">--:--</div>
+          </div>
+
+          <div class="mini-card">
+            <h3>Sunset</h3>
+            <div class="mini-value" id="sunset">--:--</div>
+          </div>
+
+          <div class="mini-card">
+            <h3>Timezone</h3>
+            <div class="mini-value" id="timezone">--</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="error" id="errorMessage"></div>
+
+      <div class="forecast-section">
+        <h2>7-Day Forecast</h2>
+        <div id="forecastDays" class="forecast-grid"></div>
+
+        <h2 style="margin-top: 24px;">Next 6 Hours</h2>
+        <div id="hourlyForecast" class="hourly-row"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
